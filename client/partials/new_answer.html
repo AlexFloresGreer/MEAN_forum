@@ -1,0 +1,12 @@
+<a href="#/dashboard">Home</a><br> | <a href="#/questions">Go Back to Question</a> | <a href="#/login">Logout</a><br>
+
+<h2>{{Question.name}}</h2>
+<h4>{{Question.description}}</h4>
+
+
+<form>
+  Your Answer: <br><textarea placeholder="Answer" ng-model="newAnswer.name"></textarea><br>
+  Supporting details for your answer (Optional): <br><textarea placeholder="Description" ng-model="newAnswer.description"></textarea><br>
+  <button type="button"><a href="#/dashboard">Cancel</a></button>
+  <button ng-click="addAnswer()">Submit</button>
+</form>

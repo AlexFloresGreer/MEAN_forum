@@ -1,0 +1,21 @@
+<h3>Welcome, {{currentUser.firstname}}!</h3>
+<a href="#/login">Logout</a><br>
+<a href="#/new_question">Add a Question</a>
+<hr>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answers</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="question in questions">
+      <td>{{question.name}}</td>
+      <td>{{question._answers.length}}</td>
+      <td> <a href="#/questions/{{question._id}}">show</a> <a href="#/questions/{{question._id}}/new_answer">answer</a></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Exam</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" >
+    <!-- assets/routes -->
+    <script src="angular/angular.js" charset="utf-8"></script>
+    <!-- bower components -->
+    <script src="angular-route/angular-route.js"></script>
+    <script src="angular-cookies/angular-cookies.js" charset="utf-8"></script>
+    <script src="assets/app.js" charset="utf-8"></script>
+    <!-- factories -->
+    <script src="./assets/factories/userFactory.js" charset="utf-8"></script>
+    <script src="./assets/factories/questionFactory.js" charset="utf-8"></script>
+    <!-- controllers -->
+    <script src="./assets/controllers/loginController.js" charset="utf-8"></script>
+    <script src="assets/controllers/showquestionController.js" charset="utf-8"></script>
+    <script src="assets/controllers/questionController.js" charset="utf-8"></script>
+    <script src="assets/controllers/userController.js" charset="utf-8"></script>
+
+
+  </head>
+  <body>
+    <center>
+    <h3>Exam App</h3>
+      <div ng-view="">
+      <!-- partials -->
+      </div>
+    <center>
+  </body>
+</html>
