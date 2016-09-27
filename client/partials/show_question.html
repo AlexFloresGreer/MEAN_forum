@@ -1,14 +1,19 @@
 
-<a href="#/dashboard">Home</a><br> | <a href="/questions/:id/new_answer">Answer this Question</a> | <a href="#/login">Logout</a><br>
+<a href="#/dashboard">Home</a><br> | <a href="#/questions/{{questions._id}}/new_answer">Answer this Question</a> | <a href="#/login">Logout</a><br>
+
+
 
 
 <h2>{{questions.name}}</h2>
 <h4>{{questions.description}}</h4>
 
 <div ng-repeat="answer in questions._answers">
+  <!-- {{answer}} -->
 
-<p>{{answer._user._id}}</p>
-<p>{{answer._users.details}}</p>
-<p>{{answer._answers.likes}}</p>
+<p>{{answer._user.firstname}}</p>
+<p><strong>{{answer.answer}}</strong></p>
+<p><i>{{answer.details}}</i></p>
+<!-- <p>{{answer._answers.likes}}</p> -->
+<p>{{answer.likes}}</p>
 <button ng-click="addLike(answer._id)">Likes</button>
 </div>

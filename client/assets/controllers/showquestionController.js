@@ -10,6 +10,16 @@ var index = function() {
       console.log('question', questions);
 
       });
+
+
+  $scope.addLike = function(answerId){
+    questionFactory.addLike(answerId, function(like) {
+      console.log('likes in controller', like);
+      index();
+    })
   }
+    }
   index();
+
+
 }])

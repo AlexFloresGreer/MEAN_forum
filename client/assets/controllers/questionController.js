@@ -6,6 +6,7 @@ var index = function() {
     $scope.currentUser = $cookies.getObject('user');
     questionFactory.getQuestions( function( questions ) {
       $scope.questions = questions;
+      $scope.questionsId = $routeParams.id;
 
       });
     }
@@ -14,6 +15,7 @@ var index = function() {
     	questionFactory.addAnswer($routeParams.id, $scope.newAnswer, function(answer) {
         	$scope.newAnswer = {};
         	index();
+          $location.url('/questions/:id');
     	});
     }
     $scope.addQuestion = function() {
@@ -24,12 +26,6 @@ var index = function() {
         index();
         $location.url('/dashboard');
       });
-    }
-    $scope.addLike = function(answerId){
-      questionFactory.addLike(answerId, function(like) {
-        console.log('likes in controller', like);
-        index();
-      })
     }
 
 
